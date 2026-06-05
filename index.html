@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zar Ventures Inc. | Premium Multi-Channel E-Commerce Distribution</title>
+    <meta name="description" content="Authorized corporate retail partner based in Ontario, Canada. We partner with top-tier brands and master distributors to scale digital retail footprint and protect marketplace integrity.">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="canonical" href="https://www.zarventures.ca/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "Zar Ventures Inc.",
+      "alternateName": "Zar Ventures",
+      "url": "https://www.zarventures.ca/",
+      "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=200&q=80",
+      "description": "Authorized corporate retail partner and multi-channel e-commerce distributor based in Ontario, Canada.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-548-708-0577",
+        "contactType": "customer service",
+        "email": "info@zarventures.ca",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <style>
+        :root { 
+            --bg: #000000; 
+            --surface: #0a0a0a;
+            --surface-alt: #121212;
+            --surface-card: #1c1c1e;
+            --surface-accent: #161617;
+            --text: #f5f5f7; 
+            --sub: #86868b; 
+            --accent: #2997ff; 
+            --border: #2c2c2e;
+        }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 24px 40px; 
+            border-bottom: 1px solid var(--border); 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            background: var(--bg);
+        }
+        .logo { font-weight: 600; font-size: 1.2rem; letter-spacing: -0.02em; }
+        nav a { text-decoration: none; color: var(--text); margin-left: 24px; font-size: 0.9rem; transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+        
+        /* Hero Section with Left Content & Optimized Image Backdrop Overlay */
+        .hero-container {
+            position: relative;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 130px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .hero-content {
+            max-width: 650px;
+        }
+        h1 { font-size: 3.4rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 24px; color: #ffffff; }
+        .subtitle { font-size: 1.35rem; color: var(--sub); font-weight: 400; margin-bottom: 40px; }
+        
+        .btn { background: var(--accent); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 500; display: inline-block; font-size: 0.95rem; transition: all 0.2s ease-in-out; }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        
+        /* Matte-Grey Trust Badge Bar Layout */
+        .badge-bar { max-width: 1100px; margin: 40px auto 0; padding: 0 40px; text-align: left; }
+        .badge-bar-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sub); margin-bottom: 16px; font-weight: 500; }
+        .badge-grid { display: flex; justify-content: flex-start; align-items: center; gap: 48px; flex-wrap: wrap; }
+        .badge-item { font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; color: #515154; position: relative; }
+        
+        /* Layout Grid Infrastructure with Zebra Tonal Sectioning */
+        .section { padding: 90px 40px; max-width: 1100px; margin: 0 auto; }
+        .section-alt { background: var(--surface-accent); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); max-width: 100%; padding: 90px 0; }
+        .section-alt-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+        
+        .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img { width: 100%; height: 380px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); transition: transform 0.3s ease; }
+        .about-img:hover { transform: scale(1.01); }
+        
+        /* Metric/Stat Callouts Row Style */
+        .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; border-top: 1px solid var(--border); padding-top: 40px; }
+        .metric-card { text-align: left; }
+        .metric-number { font-size: 2.8rem; font-weight: 700; color: #ffffff; line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em; }
+        .metric-label { font-size: 0.9rem; color: var(--sub); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; }
+        .card { background: var(--surface-card); padding: 40px 32px; border-radius: 14px; border: 1px solid var(--border); transition: all 0.25s ease; }
+        .card:hover { transform: translateY(-4px); border-color: #444446; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        /* Path-linked Interactive Roadmap System */
+        .roadmap-path { display: flex; align-items: stretch; justify-content: space-between; gap: 16px; margin-top: 50px; flex-wrap: nowrap; }
+        .path-step { background: var(--surface-card); padding: 28px 20px; border-radius: 12px; border: 1px solid var(--border); flex: 1; min-width: 0; transition: border-color 0.2s ease; }
+        .path-step:hover { border-color: var(--accent); }
+        .path-arrow { display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.5rem; font-weight: bold; user-select: none; padding: 0 4px; }
+        .step-number { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .path-step h3 { font-size: 1.2rem; margin-bottom: 8px; }
+        .path-step p { font-size: 0.95rem; margin-bottom: 0; }
+
+        .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+        .cat-card { background: var(--surface-alt); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; transition: all 0.25s ease; }
+        .cat-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+        .cat-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .cat-info { padding: 24px; }
+
+        /* Structural Compliance Grid Tiles Fix */
+        .compliance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .compliance-tile { background: var(--surface-card); padding: 32px; border-radius: 12px; border: 1px solid var(--border); border-top: 3px solid var(--accent); }
+        .compliance-tile h3 { font-size: 1.15rem; margin-top: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .compliance-tile p { font-size: 0.95rem; color: var(--sub); margin-bottom: 0; }
+
+        /* Two-Column FAQ Split Layout System */
+        .faq-split-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+        .faq-container { width: 100%; }
+        .faq-item { border-bottom: 1px solid var(--border); padding: 4px 0; }
+        .faq-question { font-size: 1.15rem; font-weight: 600; color: #ffffff; padding: 18px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+        .faq-question::-webkit-details-marker { display: none; }
+        .faq-question::after { content: "＋"; font-size: 1rem; color: var(--accent); transition: transform 0.2s; }
+        .faq-item[open] .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { color: var(--sub); font-size: 1rem; padding-bottom: 20px; padding-right: 16px; line-height: 1.6; }
+        .faq-side-img { width: 100%; height: 480px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); }
+
+        /* Two-Column Intake Split Layout System */
+        .contact-split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start; }
+        .contact-text-side { text-align: left; }
+        .contact-text-side .subtitle { margin-bottom: 32px; }
+        .contact-methods-box { background: var(--surface-alt); padding: 24px; border-radius: 12px; border: 1px solid var(--border); margin-top: 32px; }
+        .contact-method-item { margin-bottom: 12px; font-size: 1.05rem; color: var(--sub); }
+        .contact-method-item:last-child { margin-bottom: 0; }
+        .contact-link { color: var(--accent); text-decoration: none; font-weight: 500; transition: opacity 0.2s; }
+        .contact-link:hover { opacity: 0.8; }
+        
+        form { background: var(--surface-card); padding: 40px; border-radius: 16px; width: 100%; margin-top: 0; text-align: left; border: 1px solid var(--border); box-sizing: border-box; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.9rem; color: #ffffff; }
+        input, select, textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 1rem; box-sizing: border-box; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); }
+        button { background: var(--accent); color: white; border: none; padding: 14px 28px; border-radius: 8px; font-weight: 500; font-size: 1rem; cursor: pointer; width: 100%; transition: opacity 0.2s; }
+        button:hover { opacity: 0.9; }
+
+        h2 { font-size: 2.4rem; letter-spacing: -0.02em; font-weight: 700; margin-bottom: 20px; color: #ffffff; display: flex; align-items: center; gap: 12px; }
+        h3 { font-size: 1.35rem; margin-bottom: 12px; font-weight: 600; color: #ffffff; }
+        p { color: var(--sub); font-size: 1.05rem; margin-bottom: 20px; }
+        
+        /* Micro-icon shape helper */
+        .section-indicator { width: 6px; height: 24px; background: var(--accent); display: inline-block; border-radius: 2px; }
+
+        footer { border-top: 1px solid var(--border); padding: 60px 40px; max-width: 1100px; margin: 100px auto 0; font-size: 0.9rem; color: var(--sub); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; }
+        
+        /* Mobile Breakpoints & Responsive Adaptations */
+        @media (max-width: 968px) {
+            .about-layout, .faq-split-layout, .contact-split-layout { grid-template-columns: 1fr; gap: 40px; }
+            .metrics-row { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .compliance-grid { grid-template-columns: 1fr; gap: 24px; }
+            .roadmap-path { flex-direction: column; }
+            .path-arrow { transform: rotate(90deg); padding: 10px 0; }
+            h1 { font-size: 2.6rem; }
+            h2 { font-size: 1.9rem; }
+            header { padding: 20px; }
+            .hero-container { padding: 100px 20px; }
+            .faq-side-img { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Zar Ventures Inc.</div>
+        <nav aria-label="Main Navigation">
+            <a href="#about">About</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#onboarding">Process</a>
+            <a href="#categories">Segments</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1>Strategic Retail Partnerships That Scale Brands Internationally.</h1>
+                    <p class="subtitle">Zar Ventures Inc. is a trusted multi-channel e-commerce retailer. We invest capital in your inventory, protect your market value, and streamline digital distribution.</p>
+                    <a href="#contact" class="btn">Apply for a Partnership</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="badge-bar">
+            <p class="badge-bar-title">Supply Chain Integration Partners</p>
+            <div class="badge-grid">
+                <div class="badge-item">FedEx Logistics</div>
+                <div class="badge-item">UPS Supply Chain</div>
+                <div class="badge-item">GS1 Verified</div>
+                <div class="badge-item">Ontario Registry Corporate</div>
+            </div>
+        </div>
+
+        <section class="section" id="about">
+            <div class="about-layout">
+                <div>
+                    <h2><span class="section-indicator"></span> A Dedicated Extension of Your Sales Pipeline.</h2>
+                    <p>At Zar Ventures Inc., we don't just buy and move products—we curate and manage them. Based in Ontario, Canada, we operate as an authorized corporate retail partner specializing in digital commerce ecosystems.</p>
+                    <p>We partner directly with manufacturers, master distributors, and brands who want consistent wholesale volume, strict pricing compliance, and flawless logistical execution. We carry full inventory risk and actively work to elevate your brand’s digital presence.</p>
+                </div>
+                <div>
+                    <img class="about-img" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Modern commercial logistics freight semi-truck driving on the highway at sunset">
+                </div>
+            </div>
+
+            <div class="metrics-row">
+                <div class="metric-card">
+                    <div class="metric-number">24h</div>
+                    <div class="metric-label">Catalog Evaluation</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">MAP Pricing Adherence</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">GS1</div>
+                    <div class="metric-label">Verified Sourcing</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">0%</div>
+                    <div class="metric-label">Dropshipping / Stock Risk</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-alt">
+            <div class="section-alt-inner" id="capabilities">
+                <h2><span class="section-indicator"></span> Why Leading Distributors Choose Zar Ventures Inc.</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Consistent Capital Placement</h3>
+                        <p>We respect your minimum order quantities (MOQs). We deploy robust capital reserves to ensure consistent, predictable purchase orders that keep your production lines moving.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Streamlined Supply Chain</h3>
+                        <p>Our backend infrastructure is optimized for rapid intake, secure storage, and specialized prep fulfillment. We ensure your products are handled and delivered in pristine condition.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Market Value Stabilization</h3>
+                        <p>Your brand identity is your most valuable asset. We actively monitor digital spaces to safeguard your products from secondary market degradation and listing fragmentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" id="onboarding">
+            <h2><span class="section-indicator"></span> The Partnership Roadmap.</h2>
+            <p>Wholesale onboarding structured to protect your internal resources and move lines seamlessly.</p>
+            <div class="roadmap-path">
+                <div class="path-step">
+                    <div class="step-number">Phase 01</div>
+                    <h3>Catalog Review</h3>
+                    <p>We evaluate your wholesale price sheets and analyze systemic product parameters to map out volume match possibilities.</p>
+                </div>
+                <div class="path-arrow" aria-hidden="true">→</div>
+                <div class="path-step">
+                    <div class="step-number">Phase 02</div>
+                    <h3>Compliance Mirroring</h3>
+                    <p>Our regulatory team alignments review your official MAP guidelines, framework parameters, and brand asset protections.</p>
+                </div>
+                <div class="path-arrow" aria-hidden="true">→</div>
+                <div class="path-step">
+                    <div class="step-number">Phase 03</div>
+                    <h3>Capital Allocation</h3>
+                    <p>We place our initial bulk purchase orders, fulfilling complete distributor container configurations and inventory minimums.</p>
+                </div>
+                <div class="path-arrow" aria-hidden="true">→</div>
+                <div class="path-step">
+                    <div class="step-number">Phase 04</div>
+                    <h3>Active Logistics</h3>
+                    <p>Inventory safely docks inside our secure processing streams and is optimization-routed to destination market channels.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-alt">
+            <div class="section-alt-inner" id="categories">
+                <h2><span class="section-indicator"></span> Core Operational Segments.</h2>
+                <p>We build specialized commercial scale across highly functional product disciplines.</p>
+                <div class="cat-grid">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Premium modern home culinary utility layout">
+                        <div class="cat-info">
+                            <h3>Home & Functional Utilities</h3>
+                            <p>Curating exceptional premium consumer hardware, functional components, and residential living essentials.</p>
+                        </div>
+                    </div>
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="High precision structural electronics layout setup">
+                        <div class="cat-info">
+                            <h3>High-Utility Consumer Goods</h3>
+                            <p>High-demand, performance-backed categories driven by structured design and reliable manufacturing.</p>
+                        </div>
+                    </div>
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="Industrial automation hardware components">
+                        <div class="cat-info">
+                            <h3>Tools & Operational Assets</h3>
+                            <p>Fulfillment sourcing for home automation tech accessories, specialized machinery, and property upgrades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" id="compliance">
+            <h2><span class="section-indicator"></span> Zero Compromise on Brand Guidelines.</h2>
+            <p>The digital landscape can be chaotic, but your retail channels shouldn't be. We strictly operate under corporate compliance frameworks to maintain a healthy marketplace ecosystem.</p>
+            
+            <div class="compliance-grid">
+                <div class="compliance-tile">
+                    <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 100% MAP Compliance</h3>
+                    <p>We strictly honor Minimum Advertised Price guidelines to preserve your margins across all channels.</p>
+                </div>
+                <div class="compliance-tile">
+                    <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Authorized Sourcing Only</h3>
+                    <p>We buy GSM-level inventory exclusively through official channels, never the grey market.</p>
+                </div>
+                <div class="compliance-tile">
+                    <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Transparent Data Sharing</h3>
+                    <p>We provide clear sell-through reporting and inventory visibility so you always stay informed.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-alt">
+            <div class="section-alt-inner" id="faq">
+                <div class="faq-split-layout">
+                    <div class="faq-container">
+                        <h2><span class="section-indicator"></span> Frequently Asked Questions</h2>
+                        <p>Clear operational guidelines to support our distribution workflows.</p>
+                        
+                        <details class="faq-item">
+                            <summary class="faq-question">Where are distribution products sold?</summary>
+                            <div class="faq-answer">We position and manage inventory distribution networks across premium, high-volume digital marketplaces and strategic enterprise e-commerce portals in North America.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">Does Zar Ventures Inc. utilize drop-shipping structures?</summary>
+                            <div class="faq-answer">Absolutely not. We function on asset-owned corporate retail frameworks. We pay upfront, allocate full inventory financing, hold stock inside dedicated fulfillment nodes, and absorb sales risk completely.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">How are market valuation discrepancies and pricing issues handled?</summary>
+                            <div class="faq-answer">Our systematic scanning assets trace multi-channel indexes around the clock. If unauthorized listings destabilize market valuations, our internal reporting alerts partner channels directly to execute clean market compliance tracking.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">What are your standard payment and purchasing terms?</summary>
+                            <div class="faq-answer">We typically open accounts on standard commercial terms or wire payments immediately upon invoice approval. Our priority is to streamline transactions to meet your standard accounting and warehouse dispatch pipelines quickly.</div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-question">How quickly do you review and place orders on new catalogs?</summary>
+                            <div class="faq-answer">Our internal inventory procurement system evaluates price list arrays, compliance guidelines, and logistics data quickly. Initial purchase processing options are normally issued back within 24 to 48 business hours.</div>
+                        </details>
+                    </div>
+                    <div>
+                        <img class="faq-side-img" src="https://images.unsplash.com/photo-1657195588910-ad1e713093a3?w=600&auto=format&fit=crop&q=80" alt="Two plastic cups with straws">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" id="contact">
+            <div class="contact-split-layout">
+                <div class="contact-text-side">
+                    <h2><span class="section-indicator"></span> Let’s Build a Sustainable Distribution Path.</h2>
+                    <p class="subtitle">Partner with an e-commerce retail specialist equipped to manage your volume. Fill out our corporate intake form, or contact our procurement desk directly. Our purchasing group will review your complete catalog within 24 business hours.</p>
+                    
+                    <div class="contact-methods-box">
+                        <div class="contact-method-item"><strong>Direct Procurement Channels:</strong></div>
+                        <div class="contact-method-item">Email: <a href="mailto:info@zarventures.ca" class="contact-link">info@zarventures.ca</a></div>
+                        <div class="contact-method-item">Phone: <a href="tel:+15487080577" class="contact-link">+1 (548) 708-0577</a></div>
+                        <div class="contact-method-item" style="margin-top: 12px; font-size: 0.9rem; color:#444446;">Zar Ventures Corporate Intake Portal</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <div class="form-group">
+                            <label for="company_name">Company Legal Name</label>
+                            <input type="text" id="company_name" name="company_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_name">Contact Person Name & Title</label>
+                            <input type="text" id="contact_name" name="contact_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Corporate Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Product Category</label>
+                            <select id="category" name="category">
+                                <option>Consumer Goods</option>
+                                <option>Home & Kitchen</option>
+                                <option>Tools & Improvement</option>
+                                <option>Beauty & Personal Care</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Distribution Requirements</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Submit Partnership Application</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <strong>Zar Ventures Inc.</strong><br>
+                Incorporated in Ontario, Canada.<br>
+                Headquarters: Toronto, ON, Canada.
+            </div>
+            <div>
+                <strong>Hours & Support</strong><br>
+                Monday – Friday<br>
+                9:00 AM – 5:00 PM EST
+            </div>
+            <div>
+                <strong>Direct Contact</strong><br>
+                Email: info@zarventures.ca<br>
+                Phone: +1 (548) 708-0577
+            </div>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.8rem; color: #444446;">&copy; 2026 Zar Ventures Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
