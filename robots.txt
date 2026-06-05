@@ -1,0 +1,11 @@
+# https://www.zarventures.ca/ robots.txt
+# Optimized for search visibility and AI crawler access configuration
+
+User-agent: *
+Allow: /
+
+# Host definition
+Host: https://www.zarventures.ca
+
+# Specify sitemap location once generated
+# Sitemap: https://www.zarventures.ca/sitemap.xml
